@@ -61,4 +61,4 @@ angular
       $scope.messageForm.text = ''
 
     $scope.formattedTimeStamp = (timestamp) ->
-      moment(timestamp).format('MMMM Do YYYY, h:mm:ss a')
+      moment(timestamp).fromNow()

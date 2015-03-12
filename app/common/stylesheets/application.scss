@@ -119,3 +119,8 @@ input[type="submit"].input-send
   margin: 0;
   padding: 10px;
 }
+.messages-list
+{
+  height: calc(100% - 54chatpx);
+  overflow: scroll;
+}

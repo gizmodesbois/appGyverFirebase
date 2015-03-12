@@ -25,13 +25,16 @@
   <div class="right-column">
     <ul class="messages-list">
       <li class="message-list-item" ng-repeat="message in messages">
-        <p class="clearfix message-container">
+        <p class="img-holder aligned-row_addon profile-image">
+          <img src="/{{message.avatar}}" alt="{{message.uuid}}" />
+        </p>
+        <p class="clearfix message-container aligned-row_cell">
           <span class="left">
-            <strong>{{message.uuid}}</strong>
+            <strong style="display:block;">{{message.uuid}}</strong>
             {{message.text}}
           </span>
           <span class="right">
-            {{message.timestamp | date:"MM/dd/yyyy 'at' h:mma"}}
+            {{formattedTimeStamp(message.timestamp)}}
           </span>
         </p>
       </li>
