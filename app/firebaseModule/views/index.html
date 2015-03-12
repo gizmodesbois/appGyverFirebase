@@ -1,0 +1,47 @@
+<div ng-controller="IndexController" class="chat-controller clearfix">
+
+  <super-navbar>
+    <super-navbar-title>
+      Messages
+    </super-navbar-title>
+  </super-navbar>
+  <div class="left-column">
+    <div class="users-connected">
+      <ul>
+        <li ng-repeat="user in connectedUsers" class="aligned-row">
+          <p class="img-holder aligned-row_addon profile-image">
+            <img src="/{{user.avatar}}" alt="{{user.uuid}}" />
+          </p>
+          <p class="aligned-row_cell profile-row">
+            {{user.uuid}}
+          </p>
+          <p class="status-holder aligned-row_addon">
+            <span class="status {{user.status}}"></span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="right-column">
+    <ul class="messages-list">
+      <li class="message-list-item" ng-repeat="message in messages">
+        <p class="clearfix message-container">
+          <span class="left">
+            <strong>{{message.uuid}}</strong>
+            {{message.text}}
+          </span>
+          <span class="right">
+            {{message.timestamp | date:"MM/dd/yyyy 'at' h:mma"}}
+          </span>
+        </p>
+      </li>
+    </ul>
+    <div class="message-form">
+      <form ng-submit="submitMessage()" name="messageForm">
+        <input type="text" name="message" ng-model="messageForm.text" class="input-message">
+        <input type="submit" value="Envoyer" class="input-send">
+      </form>
+    </div>
+  </div>
+
+</div>

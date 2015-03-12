@@ -1,0 +1,121 @@
+body, html
+{
+  width: 100%;
+  height: 100%;
+  font-family: 'Avenir next', sans-serif;
+  background-color: white;
+  color: #212121;
+}
+
+@import "scss/aligned-row";
+
+.img-holder img
+{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.profile-image
+{
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.profile-row
+{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.supersonic-navbar-mock {
+  background-color: #00B5FF !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+.left-column {
+  width: 300px;
+  float: left;
+  height: 100%;
+  background-color: #34495E;
+  color: white;
+  padding: 20px;
+}
+.right-column {
+  width: calc(100% - 300px);
+  float: right;
+  position: relative;
+  height: 100%;
+}
+.message-form
+{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #ECF0F1;
+  padding: 10px;
+}
+.status-holder
+{
+  min-width: 14px;
+  max-width: 14px;
+  width: 14px;
+}
+.status
+{
+  display:block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  &.online
+  {
+    background-color: #2ECC71;
+  }
+  &.idle
+  {
+    background-color: #F1C40F;
+  }
+  &.away
+  {
+    background-color: #29394A;
+  }
+}
+.chat-controller
+{
+  height: 100%;
+}
+input[type="text"].input-message
+{
+  background-color: #D8DDE0;
+  border: none;
+  box-shadow:none;
+  width: calc(100% - 100px);
+  float:left;
+}
+input[type="submit"].input-send
+{
+  width: 100px;
+  float: right;
+  color: #334252;
+  background: none;
+  box-shadow: none;
+  height: 34px;
+  border: none;
+}
+
+
+.left
+{
+  float:left;
+}
+.right
+{
+  float: right;
+}
+.message-container
+{
+  margin: 0;
+  padding: 10px;
+}

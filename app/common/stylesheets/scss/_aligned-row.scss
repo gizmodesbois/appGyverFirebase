@@ -1,0 +1,62 @@
+.aligned-row {
+  display: table;
+  width: 100%; /* faking display: block */
+}
+
+.aligned-row_addon, .aligned-row_cell, .aligned-row_label, .aligned-row_field, .aligned-row_post, .aligned-row_image, .aligned-row_auto, .aligned-row_half {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.aligned-row_auto-width {
+  table-layout: fixed;
+}
+
+.aligned-row_addon {
+  white-space: nowrap;
+}
+
+.aligned-row_nowrap {
+  white-space: normal;
+  vertical-align: top;
+}
+
+.aligned-row_cell {
+  width: 100%; /* take maximum space available */
+}
+
+.aligned-row_auto {
+  width: auto; /* take maximum space available */
+}
+
+.aligned-row-left {
+  text-align: left;
+}
+
+.aligned-row_half {
+  width: 50%;
+}
+
+.aligned-row_label, .aligned-row_image {
+  width: 8em;
+  max-width: 8em;
+}
+
+.aligned-row_post {
+  width: pxtoem(30px, 16px);
+}
+
+.aligned-row_field {
+  text-align: right;
+  .fld-group {
+    margin: 0;
+  }
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+.aligned-row_field.aligned-row_field--fix {
+  display: block
+}
